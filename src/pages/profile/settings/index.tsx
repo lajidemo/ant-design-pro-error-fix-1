@@ -22,7 +22,10 @@ const ProfileSettings = () => {
     fetchProvinces,
     {
       onSuccess: (data) => {
-        setProvinces(data);
+        if(data){
+          setProvinces(data);
+        }
+
       },
     },
   );
@@ -31,9 +34,11 @@ const ProfileSettings = () => {
   const { run: getCities, loading: citiesLoading } = useRequest(fetchCities, {
     manual: true,
     onSuccess: (data) => {
+        if(data){
       setCities(data);
       form.setFieldsValue({ city: undefined, district: undefined });
       setDistricts([]);
+        }
     },
   });
 
@@ -43,8 +48,10 @@ const ProfileSettings = () => {
     {
       manual: true,
       onSuccess: (data) => {
+        if(data){
         setDistricts(data);
         form.setFieldsValue({ district: undefined });
+        }
       },
     },
   );
