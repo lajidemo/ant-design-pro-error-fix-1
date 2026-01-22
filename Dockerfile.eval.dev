@@ -1,7 +1,7 @@
 ARG NODE_VERSION=22
 FROM node:${NODE_VERSION}-alpine
 
-ARG CODE_URL=https://deep-evaluation-set.tos-cn-beijing.volces.com/ant-design-pro-5d00b955758c3932f844b8834f1940ec7d0b2356.zip
+ARG CODE_URL=https://deep-evaluation-set.tos-cn-beijing.volces.com/ant-design-pro-error-fix-1-Doubao-Seed-Code-2.zip
 
 # Alpine 使用 apk 而非 apt-get
 RUN apk add --no-cache \
